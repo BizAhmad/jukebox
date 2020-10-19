@@ -12,18 +12,35 @@ class JukeboxResolverServiceTest {
     }
 
     @Test
-    void getCompatibleJukes() {
+    void getCompatibleJukes_givenValidSettings_shouldReturnList() {
     }
 
     @Test
-    void filterJukes() {
+    void getCompatibleJukes_givenNonValidSettings_shouldReturn404() {
+    }
+
+
+    @Test
+    void filterJukes_givenCompatibleSettingAndJuke_ShouldReturnTrue() {
     }
 
     @Test
-    void fetchSetting() {
+    void filterJukes_givenNonCompatibleSettingAndJuke_ShouldReturnFalse() {
     }
 
     @Test
-    void fetchJukesByModel() {
+    void fetchSetting_givenValidSetting_ShouldReturnSetting() {
+    }
+
+    @Test
+    void fetchSetting_givenNonValidSetting_ShouldReturn404() {
+    }
+
+    @Test
+    void fetchJukesByModel_givenModel_shouldReturnJukesListOnlyWithThatModel() {
+    }
+
+    @Test
+    void fetchJukesByModel_givenNonExistingModel_shouldReturnEmptyList() {
     }
 }

@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class JukeboxApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void init(){
+
 	}
 
 }
