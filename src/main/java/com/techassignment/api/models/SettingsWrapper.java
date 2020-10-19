@@ -14,4 +14,8 @@ public class SettingsWrapper {
     public SettingsWrapper() {
         settings = new ArrayList<>();
     }
+
+    public <T> SettingsWrapper(List<Setting> settings) {
+        this.settings = settings;
+    }
 }
