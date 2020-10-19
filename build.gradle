@@ -1,0 +1,46 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.tech-assignment'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.11.3'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.1.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-test', version: '1.4.2.RELEASE'
+
+	implementation 'org.springframework.boot:spring-boot-starter'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
+	testImplementation(
+			'junit:junit:4.12',
+			'org.mockito:mockito-core:2.7.22',
+	)
+	implementation 'javax.inject:javax.inject:1'
+
+	testCompile group: 'io.rest-assured', name: 'spring-mock-mvc', version: '3.0.0'
+
+}
+
+test {
+	useJUnitPlatform()
+}
